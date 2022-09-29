@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+}
+
+.subtitle {
+    font-size: 20pt;
+    /* border-left: 5px solid blueviolet; */
+    border-bottom: 5px dotted blueviolet;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 10px;
+    width: 30vw;
+    text-align: center;
+    margin: auto;
+    /* animation: goright 3s; */
+    animation: goright 3s;
+    animation-iteration-count: 1
+}
+
+/* !Project 1: Wall Following */
+.intro h1 {
+    /* position: absolute; */
+    margin: auto;
+    font-size: 30px;
+    font-weight: 800;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 30vw;
+    background-color: rgb(215, 191, 97);
+    /* text-shadow: coral; */
+    box-shadow: 10px 10px greenyellow;
+    border-style: double;
+    text-align: center;
+}
+
+/* intro image */
+.p1-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-height: 60vh;
+    border-radius: 15px;
+    /* height: auto; */
+}
+/* !Start of first div */
+.first {
+    max-width: 55vw;
+}
+/* Desprition */
+#description {
+    position: relative;
+    font-size: 18px;
+    margin: 10px 15px 5px;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px sandybrown;
+}
+/* Adjust placement of separator 1 */
+/* #separator1 {
+    position: absolute;
+    text-align: center;
+    left: 35vw;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} */
+
+/* !Drive Square video */
+.first video {
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    left: 10vw;
+    width: 30vw;
+    /* padding: 10px 5px 10px; */
+    border-radius: 15px;
+    background-color: aliceblue;
+    margin-left: 30px;
+}
+
+video:hover {
+    transform: scale(1.1, 1.1);
+}
+
+
+.p1-img:hover {
+    height: 55vh;
+    transform: scale(1.2, 1.2);
+}
+
+
+/* !Start of Section Wall-Follower */
+.second {
+    max-width: 55vw;
+    font-size: 18px;
+}
+.second p {
+    position: relative;
+    left: 0;
+    margin: 20px 5px 20px;
+    /* border: 5px dotted #111; */
+    /* background-position: ; */
+}
+
+/* #separator2 {
+    position: absolute;
+    font-size: 25px;
+    left: 0;
+
+} */
+.second p{
+    margin: 10px 15px 5px;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px sandybrown;
+}
+
+.video video{
+    /* display: inline; */
+    border-radius: 15px;
+    width: 30vw;
+    /* background-color: goldenrod; */
+    /* background-size: ; */
+    /* justify-content: space-between; */
+}
+
+#v2 {
+    margin-left: 5vw;
+    margin-right: 20vw;
+}
+
+.word1 {
+    position: absolute;
+    font-size: 20px;
+    /* left: 0; */
+    animation: goright 3s;
+    /* animation-delay: 3s; */
+    /* animation: goright 3s timing-function delay inifinite direction fill-mode; */
+    animation-iteration-count: infinite;
+    
+}
+.word2 {
+    position: absolute;
+    font-size: 20px;
+    /* left: 0; */
+    animation: goleft 0s ease-in 3s;
+    /* animation-delay: 3s; */
+    animation-iteration-count: infinite;
+}
+
+.video p {
+    text-align: center;
+    font-style: italic;
+}
+@keyframes goright {
+    from {left: 0px;}
+    to {left: 80vw;}
+}
+
+@keyframes goleft {
+    from {left: 80vw;}
+    to {left: 0px;}
+}
+
