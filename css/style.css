@@ -116,6 +116,9 @@ video:hover {
     margin: 20px 5px 20px;
     /* border: 5px dotted #111; */
     /* background-position: ; */
+    margin: 10px 15px 5px;
+    background-color: antiquewhite;
+    box-shadow: 5px 5px sandybrown;
 }
 
 /* #separator2 {
@@ -124,16 +127,16 @@ video:hover {
     left: 0;
 
 } */
-.second p{
+/* .second p{
     margin: 10px 15px 5px;
     background-color: antiquewhite;
     box-shadow: 5px 5px sandybrown;
-}
+} */
 
 .video {
     /* display: inline; */
     border-radius: 15px;
-    width: 10vw;
+    /* width: 10vw; */
     display: flex;
     /* flex-basis: 200px; */
     /* background-color: goldenrod; */
@@ -196,5 +199,30 @@ video:hover {
     }
     #description {
         margin: auto;
+    }
+
+    .p1-img {
+        height: 30vh;
+    }
+    
+    .first video {
+        width: 100vw;
+        left: 0;
+        margin:0 0 0 ;
+    }
+
+    .second p{
+        width: 100vw;
+    }
+    .video {
+        /* width: 100vw; */
+        flex-direction: column;
+    }
+
+    .video video {
+        width: 100vw;
+        margin-left: 1.5vw;   
+        margin-right: 1.5vw;
+        border-radius: 3vw;
     }
 }
