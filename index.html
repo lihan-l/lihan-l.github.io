@@ -4,59 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
     <title>ROB102 Projects Website</title>
 </head>
 <body>
-    <section class="intro">
-        <h1>
-            ROB102 - Project 1: Wall Following
-        </h1>
-        <div class="subtitle">
-            From Drive Square to Wall-Follower --- Team4: Julius & Lihan
+    <header>
+        <div class="logo"> ROB 102 - Intro to AI and Programming</div>
+        <div class="menu"></div>
+        <div class="navigation">
+            <ul>
+                <!-- Different picture background, each sections aligned vertically in parrallel -->
+                <li><a href="project1.html">Project 1: WALL FOLLOWING</a></li>
+                <li><a href="project2.html">Project 2: BUG NAVIGATION</a></li>
+            </ul>
         </div>
-        <img src="img/omini-6.jpg" class="p1-img" />
-        <div class="first">
-            <p id="description">
-                The first part of this project is about controlling the robot to drive a square three times.
-                Since there will be some offset between the actual moving direction and the desired moving direction,
-                we manually adjust the "wz" term in the "drive" function for each turning. Putting thses code inside
-                a for loop, we get the motion as shown in the video below.
-            </p>
-            <!-- <p id="separator1">
-                From Drive Square
-            </p> -->
-            <video src="video/video1.mp4" controls></video>
-        </div>
-    </section>
-
-    <section class="wall-follower">
-        <div class="second">
-            <p>
-                In the second part of the project, we first get the direction of velocity that is parallel and perpendicular 
-                to the wall, then use bang-bang control to get the proper magnitude of velocity. This strategy does 
-                not have the risk of overshoot like p-control, but suffers from unsmooth motion. We can combine both strategy
-                to behave both smoothly and stably.
-            </p>
-            <!-- <p id="separator2">
-                to Wall-Follower
-            </p> -->
-        </div>
-        <div class="video">
-            <video id="v2" src="video/video2.mp4" controls></video>
-            <video id="v3" src="video/video3.mp4" controls></video>
-            <video id="v3" src="video/video4.mp4" controls></video>
-        </div>
-        <p>
-            The Evolution of M-Bot: Comparison between different control algorithms & parameters
-        </p>
-    </section>
-
-    <!-- <div class="word1">
-        <p>From Drive Square</p>
-    </div>
-    <div class="word2">
-        <p>to Wall Follower!</p>
-    </div> -->
+    </header>
+    
 </body>
 </html>

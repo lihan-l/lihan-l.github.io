@@ -1,0 +1,2 @@
+1. How to place text under the figure/video
+2. How to add drop down menu in the left side bar? (How to modify base on the template)

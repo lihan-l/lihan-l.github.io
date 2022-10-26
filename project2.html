@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/project2.css"/>
+    <title>ROB102 Projects Website</title>
+</head>
+<body>
+    <section class="side-bar">
+        <h1>
+            ROB 102 Project 2: Bug  Navigation<br>
+        </h1>
+        <h2>Team1:<br> Lihan Lian, Beyonce Cruze</h2>
+    </section>
+    <div class="algorithm">
+        <div class="implementation">
+            <img src="img/state-machine.png">
+            <!-- <div class="subheading"></div> -->
+            <p> 
+                <b>Algorithm Description:</b><br>
+                The bug navigation algorithm is composed of three different states
+                (as shown in the left picture): <br>1. Stop the robot if it reaches the goal<br>
+                    &emsp; There is a previous defined variable <i>error_threshold</i>, which is 
+                    used for comparing with the <i> error (distance between the goal and robot current position)</i>. 
+                    Once the error is within an acceptable range, it will stop. <br><br>
+                2. Do wall following if it encounters obstacle<br>
+                    &emsp;There is a previous defined variable <i> range_threshold</i>, which is used for 
+                    comparing with the <i>ranges (the distance from the nearest obstacle)</i>. Once the
+                    ranges variable is within the threshold, the robot will start wall following<br><br>
+                3. Move toward the goal at a reasonable speed and in an appropriate direction<br>
+                    &emsp;The last possible state is moving toward the goal. The algorithm calculates the
+                    moving angle by taking inverse tanget of <i>error_y </i>/<i>error_x</i>, and then
+                    scale the velocity in both x and y direction proportionally to make the total velocity
+                    has a value of 0.6 m/s.
+            </p>
+            <video src="video/bug-navigation.mp4" controls></video>
+        </div>
+
+        <div class="problems">
+            <img src="img/hit_the_spot_terminal_output.png">
+            <!-- <img src="img/state-machine.png" alt=""> -->
+            <p> 
+                <b>Some Problems:</b><br>
+                1. The odemetry information provided by the encoder is not accurate enough<br>
+                &emsp; This can be demonstrated by
+                the video of showing the performance of <i>"hit the spot"</i>. Although the pose vector tells the robot 
+                it is almost at the origin, but the distance from origin is actually bigger than the encoder thinks it is.
+                This error could be accumulated, so the further the robot travels, the bigger the error is.<br>
+                
+                <br>
+                2. The Algorithm might fail when there are multiple obstacles<br>
+                &emsp;The robot is likely to get stucked when it encounter the enviroment
+                where there are two close obstacles on its path to the goal.
+                Since the robot will try to avoid both obstacles, it will stuck in the wall following state
+                and sway between two obstacles. <br>
+            </p>
+            <video src="video/hit-the-spot.mp4" controls></video>
+        </div>
+    </div>
+    <div class="improvement">
+        <!-- <img src="img/super-bug1.jpg" alt=""> -->
+        <img src="img/super-bug2.jpg" alt="">
+        <img src="img/superbug-6-pack.jpg" alt="">
+        <p>
+            <b>Ways to Improve:</b><br>
+            1. In order to reduce the position error between robot and the goal, we can improve 
+            the accuracy of encoder, or utilize the camera to provide more information to tell the
+            robot where it actually is.<br><br>
+            2. In order to solve the issue which cause the robot sway between two obstacles, we can
+            improve the wall following algorithm. Instead of start wall-following whenever it encounters
+            the obstacle, we can write an algorithm that find a best path that can lead the robot to the
+            goal while maintaining a safety distance from the obstacles. (use grid map? BFS? A*? Info from Lidar? Map?)
+        </p>
+        <!-- <video src="video/bug-navigation-issue.mp4" controls></video> -->
+        <img src="gif/bug-navigation-issue_AdobeExpress.gif" alt="">
+    </div>
+
+</body>
+</html>
