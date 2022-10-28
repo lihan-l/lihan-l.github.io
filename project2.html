@@ -70,8 +70,8 @@
             robot where it actually is.<br><br>
             2. In order to solve the issue which cause the robot sway between two obstacles, we can
             improve the wall following algorithm. Instead of start wall-following whenever it encounters
-            the obstacle, we can write an algorithm that find a best path that can lead the robot to the
-            goal while maintaining a safety distance from the obstacles. (use grid map? BFS? A*? Info from Lidar? Map?)
+            the obstacle, we can write an algorithm that use an utility function to provide a path with 
+            lowest cost while maintaining safety distance.
         </p>
         <!-- <video src="video/bug-navigation-issue.mp4" controls></video> -->
         <img src="gif/bug-navigation-issue_AdobeExpress.gif" alt="">
